@@ -1,147 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nazar Khalid | Demography & Population Studies PhD Student</title>
-
-  <!-- SEO & Social Meta Tags -->
-  <meta name="title" content="Nazar Khalid | Demography & Population Studies PhD Student at University of Pennsylvania">
-  <meta name="description" content="I am Nazar Khalid, a PhD student in Demography & Population Studies at the University of Pennsylvania. My work focuses on social inequality, sanitation, health disparities, and population dynamics in South Asia.">
-  <meta name="keywords" content="Nazar Khalid, demography, UPenn, PhD student, South Asia, gender inequality, sanitation, population studies">
-  <meta name="author" content="Nazar Khalid">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://amaan329.github.io/nazarkhalid/">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Nazar Khalid | Demography & Population Studies PhD Student">
-  <meta property="og:description" content="Research on social inequality, sanitation, and demographic change in South Asia — University of Pennsylvania.">
-  <meta property="og:url" content="https://amaan329.github.io/nazarkhalid/">
-  <meta property="og:image" content="https://amaan329.github.io/nazarkhalid/profile.jpg">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nazar Khalid | Demography & Population Studies PhD Student">
-  <meta name="twitter:description" content="Research on social inequality, sanitation, and demographic change in South Asia.">
-  <meta name="twitter:image" content="https://amaan329.github.io/nazarkhalid/profile.jpg">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Nazar Khalid",
-    "url": "https://amaan329.github.io/nazarkhalid/",
-    "image": "https://amaan329.github.io/nazarkhalid/profile.jpg",
-    "jobTitle": "PhD Student, Demography & Population Studies",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "University of Pennsylvania"
-    },
-    "sameAs": [
-      "https://www.pop.upenn.edu/bio/nazar-khalid",
-      "https://scholar.google.com/citations?user=sXtOs2sAAAAJ&hl=en"
-    ],
-    "description": "PhD student at University of Pennsylvania studying population dynamics, social stratification, and sanitation in South Asia."
-  }
-  </script>
-
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f8f8f8; }
-    header { background: #003366; color: white; padding: 20px; text-align: center; }
-    nav { display: flex; justify-content: center; background: #e6e6e6; padding: 10px; }
-    nav a { margin: 0 15px; color: #003366; text-decoration: none; font-weight: bold; }
-    section { max-width: 800px; margin: auto; padding: 20px; background: white; margin-top: 20px; }
-    h2 { border-bottom: 2px solid #003366; padding-bottom: 5px; color: #003366; }
-    .profile-pic { display: block; width: 200px; border-radius: 50%; margin: 0 auto 20px; }
-    ul { padding-left: 20px; }
-    footer { background: #003366; color: white; text-align: center; padding: 15px; margin-top: 20px; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nazar Khalid — Academic Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style> html { scroll-behavior: smooth; } </style>
 </head>
-<body>
-
-  <header>
-    <h1>Nazar Khalid</h1>
-    <p>PhD Student in Demography & Population Studies | University of Pennsylvania</p>
+<body class="bg-white text-gray-800">
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="font-semibold tracking-tight">Nazar Khalid</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#home" class="hover:underline">Home</a>
+        <a href="#research" class="hover:underline">Research</a>
+        <a href="#public-writings" class="hover:underline">Public Writings</a>
+        <a href="#cv" class="hover:underline">CV</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden p-2 border rounded" aria-label="Menu">☰</button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#research" onclick="toggleMenu()">Research</a>
+        <a href="#public-writings" onclick="toggleMenu()">Public Writings</a>
+        <a href="#cv" onclick="toggleMenu()">CV</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+      </div>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#interests">Interests</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#media">Media & Events</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <main id="home" class="max-w-5xl mx-auto px-4">
+    <section class="py-12 md:py-16 grid md:grid-cols-[160px,1fr] gap-8 items-start">
+      <img src="avatar.jpg" alt="Profile photo of Nazar Khalid" class="w-40 h-40 object-cover rounded-full border" />
+      <div>
+        <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Nazar Khalid</h1>
+        <p class="mt-1 text-gray-600">PhD Student, Demography & Population Studies</p>
+        <p class="mt-1 text-gray-600">Population Studies Center & Department of Sociology, University of Pennsylvania</p>
+        <p class="mt-4 leading-relaxed">
+          Nazar grew up in Bihar and Maharashtra (India). He completed his BA in Economics at University of Delhi and MA/MPhil in Economics at Jawaharlal Nehru University. He is currently pursuing a joint PhD in Demography & Sociology at Penn and is the recipient of the Presidential PhD Fellowship.  
+        </p>
+        <p class="mt-2 leading-relaxed">
+          His research spans climatic disruption, education & health inequality, social stratification, and survey & mixed methods approaches — especially in South Asia. With r.i.c.e., he has led phone surveys on discrimination and rural panel surveys on sanitation and clean fuel use.
+        </p>
+      </div>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="profile.jpg" alt="Nazar Khalid – PhD student at UPenn" class="profile-pic">
-    <p>I am a PhD student in Demography & Population Studies at the University of Pennsylvania, honored with the Inaugural Presidential PhD Fellowship. I earned my B.A. in Economics from Delhi University, and my M.A. & M.Phil. in Economics from Jawaharlal Nehru University, New Delhi. Originally from Bihar and Maharashtra, my research is grounded in South Asian contexts.</p>
-    <p>I am also a Research Fellow at <a href="https://riceinstitute.org" target="_blank">r.i.c.e Institute</a>, leading projects on sanitation behavior, social inequality, and barriers to clean fuel adoption.</p>
-  </section>
+    <!-- Research tab content (peer-reviewed) -->
+    <section id="research" class="py-10 border-t">
+      <h2 class="text-2xl font-semibold tracking-tight">Research — Peer-Reviewed Publications</h2>
+      <ol class="mt-6 list-decimal pl-5 space-y-3">
+        <!-- list from earlier -->
+        <li>Khalid, Nazar, Jere Behrman, Emily Hannum, & Amrit Thapa. 2025. “Floods, community infrastructure, and children’s learning losses in rural India.” <em>Economics of Education Review</em>. [Link]</li>
+        <!-- ... (other items) ... -->
+      </ol>
+    </section>
 
-  <section id="interests">
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Social inequality across gender, caste, and religion</li>
-      <li>Household sanitation and environmental health</li>
-      <li>Fertility, mortality, and population dynamics</li>
-      <li>Quantitative survey methods</li>
-      <li>Social policy in South Asia</li>
-    </ul>
-  </section>
+    <!-- Public Writings -->
+    <section id="public-writings" class="py-10 border-t">
+      <h2 class="text-2xl font-semibold tracking-tight">Public Writings & Policy Scholarship</h2>
+      <ol class="mt-6 list-decimal pl-5 space-y-3">
+        <!-- entries from earlier -->
+        <li>Pant, Lovey, Kanika Sharma, Nazar Khalid & Nikhil Srivastav. 2022. “Disrespectful Maternity Care: Labour Room Violence in Government Health Facilities.” <em>The India Forum</em>. [Link]</li>
+        <!-- ... -->
+      </ol>
+    </section>
 
-  <section id="research">
-    <h2>Research Projects</h2>
-    <p>My research blends demographic analysis with social perspectives to explore how inequality and environmental factors shape health, education, and behavior. I study:</p>
-    <ul>
-      <li>Discrimination in sanitation behavior and mental health</li>
-      <li>Persistence of solid fuel use despite LPG subsidies</li>
-      <li>Impacts of floods on children's learning in rural India</li>
-      <li>Discrimination using phone surveys among marginalized groups</li>
-    </ul>
-  </section>
+    <!-- CV placeholder -->
+    <section id="cv" class="py-10 border-t">
+      <h2 class="text-2xl font-semibold tracking-tight">CV</h2>
+      <p class="mt-3 text-gray-600">Download Nazar’s full CV (PDF link to be added).</p>
+      <!-- We leave embed or link slots blank / commented out for now -->
+      <!-- <a href="cv.pdf" class="inline-flex items-center gap-2 mt-4 px-4 py-2 border rounded-lg hover:bg-gray-50" download>Download CV</a> -->
+      <!-- <div class="mt-6 aspect-[4/3] border rounded-lg overflow-hidden"><iframe src="cv.pdf" class="w-full h-full" title="CV preview"></iframe></div> -->
+    </section>
 
-  <section id="publications">
-    <h2>Selected Publications</h2>
-    <p>Here is a list of works from my <a href="https://scholar.google.com/citations?user=sXtOs2sAAAAJ&hl=en" target="_blank">Google Scholar profile</a>:</p>
-    <ul>
-      <li><strong>Aadhaar and food security in Jharkhand: Pain without gain?</strong> (<em>Economic & Political Weekly</em>, 2017)</li>
-      <li><strong>Changes in open defecation in rural north India: 2014-2018</strong> (<em>IZA Discussion Paper</em>, 2019)</li>
-      <li><strong>When women eat last: Discrimination at home and women’s mental health</strong> (PLoS ONE, 2021)</li>
-      <li><strong>Persistence of solid fuel use in rural North India</strong> (<em>Economic & Political Weekly</em>, 2020)</li>
-      <li><strong>Revisiting open defecation: Panel survey evidence</strong> (<em>Economic & Political Weekly</em>, 2020)</li>
-      <li><strong>Coercion, Construction, and "ODF paper pe": Swachh Bharat According to Local Officials</strong> (SocArXiv, 2019)</li>
-      <li><strong>Floods and Children’s Education in Rural India</strong> (RSF, 2024)</li>
-      <li><strong>Gender and LPG use after government intervention</strong> (<em>World Development</em>, 2021)</li>
-      <li><strong>Measurement of population mental health</strong> (<em>Health Policy & Planning</em>, 2021)</li>
-    </ul>
-  </section>
+    <!-- Contact -->
+    <section id="contact" class="py-10 border-t">
+      <h2 class="text-2xl font-semibold tracking-tight">Contact</h2>
+      <ul class="mt-4 space-y-2 text-gray-700">
+        <li>📧 <a href="mailto:nazark@sas.upenn.edu" class="underline">nazark@sas.upenn.edu</a></li>
+        <li>📞 (267)–902–6289</li>
+        <li>🏛 University of Pennsylvania, Philadelphia, PA</li>
+        <li>🔗 <a href="https://scholar.google.com/citations?user=sXtOs2sAAAAJ" target="_blank" class="underline">Google Scholar</a></li>
+        <li>🐦 <a href="https://x.com/nazar_rice" target="_blank" class="underline">X / Twitter</a></li>
+        <li>💼 <a href="https://www.linkedin.com/in/nazar-khalid-b88374169" target="_blank" class="underline">LinkedIn</a></li>
+      </ul>
+    </section>
 
-  <section id="media">
-    <h2>Media & Events</h2>
-    <ul>
-      <li>Contributed to RSF Journal on climate shocks & learning — Russell Sage Foundation (2024) <em>(Penn Sociology news)</em></li>
-      <li>Presented "Floods, Community Infrastructure and Children's Learning Losses" — PAA Practice Talks, Penn PSC (Mar 2025)</li>
-      <li>Led Workshops on inequality & exam performance — Penn Sociology (Oct–Nov 2023)</li>
-      <li>World Development feature story on gender and LPG adoption — Penn PSC (Sept 2021)</li>
-    </ul>
-  </section>
+  </main>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:nazark@sas.upenn.edu">nazark@sas.upenn.edu</a></p>
-    <p>Profile: <a href="https://www.pop.upenn.edu/bio/nazar-khalid" target="_blank">UPenn Population Studies Center</a></p>
-    <p>Google Scholar: <a href="https://scholar.google.com/citations?user=sXtOs2sAAAAJ&hl=en" target="_blank">View my full publications</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Nazar Khalid</p>
+  <footer class="mt-12 py-8 border-t">
+    <div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">
+      © <span id="year"></span> Nazar Khalid. Hosted on GitHub Pages.
+    </div>
   </footer>
 
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function toggleMenu() { mobileMenu.classList.toggle('hidden'); }
+    btn.addEventListener('click', toggleMenu);
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
 
 
