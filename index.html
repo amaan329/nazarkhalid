@@ -1,136 +1,67 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nazar Khalid — Academic Homepage</title>
-  <meta name="description" content="Nazar Khalid — PhD student in Demography & Sociology at the University of Pennsylvania. Research on climate shocks, education & health inequalities, social stratification, and policy in South Asia.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style> html { scroll-behavior: smooth; } </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nazar Khalid — Home</title>
+<meta name="description" content="Nazar Khalid — PhD student in Demography & Sociology at the University of Pennsylvania.">
+<script src="https://cdn.tailwindcss.com"></script>
+<style> html{scroll-behavior:smooth} </style>
 </head>
 <body class="bg-white text-gray-800">
-  <!-- Header / Nav -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
-    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#home" class="font-semibold tracking-tight">Nazar Khalid</a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#home" class="hover:underline">Home</a>
-        <a href="#research" class="hover:underline">Research</a>
-        <a href="#public-writings" class="hover:underline">Public Writings</a>
-        <a href="#cv" class="hover:underline">CV</a>
-        <a href="#contact" class="hover:underline">Contact</a>
-      </nav>
-      <button id="menuBtn" class="md:hidden p-2 border rounded" aria-label="Menu">☰</button>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t">
-      <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
-        <a href="#home" onclick="toggleMenu()">Home</a>
-        <a href="#research" onclick="toggleMenu()">Research</a>
-        <a href="#public-writings" onclick="toggleMenu()">Public Writings</a>
-        <a href="#cv" onclick="toggleMenu()">CV</a>
-        <a href="#contact" onclick="toggleMenu()">Contact</a>
-      </div>
-    </div>
-  </header>
+<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+<div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+<a href="index.html" class="font-semibold tracking-tight">Nazar Khalid</a>
+<nav class="hidden md:flex items-center gap-6 text-sm">
+<a href="index.html" class="underline">Home</a>
+<a href="research.html" class="hover:underline">Research</a>
+<a href="public-writings.html" class="hover:underline">Public Writings</a>
+<a href="cv.html" class="hover:underline">CV</a>
+<a href="contact.html" class="hover:underline">Contact</a>
+</nav>
+<button id="menuBtn" class="md:hidden p-2 border rounded" aria-label="Menu">☰</button>
+</div>
+<div id="mobileMenu" class="md:hidden hidden border-t">
+<div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
+<a href="index.html" onclick="toggleMenu()">Home</a>
+<a href="research.html" onclick="toggleMenu()">Research</a>
+<a href="public-writings.html" onclick="toggleMenu()">Public Writings</a>
+<a href="cv.html" onclick="toggleMenu()">CV</a>
+<a href="contact.html" onclick="toggleMenu()">Contact</a>
+</div>
+</div>
+</header>
 
-  <!-- Home -->
-  <main id="home" class="max-w-5xl mx-auto px-4">
-    <section class="py-12 md:py-16 grid md:grid-cols-[160px,1fr] gap-8 items-start">
-      <img src="profile.jpg" alt="Profile photo of Nazar Khalid" class="w-40 h-40 object-cover rounded-full border" />
-      <div>
-        <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Nazar Khalid</h1>
-        <p class="mt-1 text-gray-700">PhD Student, Demography & Sociology (Joint)</p>
-        <p class="mt-1 text-gray-600">Population Studies Center & Department of Sociology, University of Pennsylvania</p>
-        <p class="mt-4 leading-relaxed">Presidential PhD Fellow at Penn. Previously BA (Economics) at University of Delhi; MA & MPhil (Economics) at Jawaharlal Nehru University. Grew up in Bihar and Maharashtra, India.</p>
-        <p class="mt-2 leading-relaxed">Research: climatic disruptive events; education & health inequalities; social stratification; early childhood development; marginalized youth; quantitative, survey, & mixed methods; evaluation and policy analysis; South Asia.</p>
-        <div class="mt-4 flex flex-wrap gap-3 text-sm">
-          <a class="underline" href="https://scholar.google.com/citations?user=sXtOs2sAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-          <a class="underline" href="https://pdri-devlab.upenn.edu/bio/nazar-khalid/" target="_blank" rel="noopener">PDRI–DevLab</a>
-          <a class="underline" href="https://riceinstitute.org/people/nazar-khalid/" target="_blank" rel="noopener">r.i.c.e.</a>
-          <a class="underline" href="https://x.com/nazar_rice" target="_blank" rel="noopener">X / Twitter</a>
-          <a class="underline" href="#contact">Contact</a>
-        </div>
-      </div>
-    </section>
+<main class="max-w-5xl mx-auto px-4">
+<section class="py-12 md:py-16 grid md:grid-cols-[200px,1fr] gap-8 items-start">
+<!-- IMPORTANT: No cropping. We avoid fixed height and use object-contain so the head is never cut. -->
+<img src="profile.jpg" alt="Profile photo of Nazar Khalid" class="w-48 h-auto rounded-xl border object-contain bg-gray-100" />
+<div>
+<h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Nazar Khalid</h1>
+<p class="mt-1 text-gray-700">PhD Student, Demography & Sociology (Joint)</p>
+<p class="mt-1 text-gray-600">Population Studies Center & Department of Sociology, University of Pennsylvania</p>
+<p class="mt-4 leading-relaxed">Presidential PhD Fellow at Penn. BA (Economics), University of Delhi; MA & MPhil (Economics), Jawaharlal Nehru University. Grew up in Bihar and Maharashtra, India.</p>
+<p class="mt-2 leading-relaxed">Research: climatic disruptive events; education & health inequalities; social stratification; early childhood development; marginalized youth; quantitative, survey, & mixed methods; evaluation and policy analysis; South Asia.</p>
+<div class="mt-4 flex flex-wrap gap-3 text-sm">
+<a class="underline" href="https://scholar.google.com/citations?user=sXtOs2sAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+<a class="underline" href="https://pdri-devlab.upenn.edu/bio/nazar-khalid/" target="_blank" rel="noopener">PDRI–DevLab</a>
+<a class="underline" href="https://riceinstitute.org/people/nazar-khalid/" target="_blank" rel="noopener">r.i.c.e.</a>
+<a class="underline" href="https://x.com/nazar_rice" target="_blank" rel="noopener">X / Twitter</a>
+<a class="underline" href="contact.html">Contact</a>
+</div>
+</div>
+</section>
+</main>
 
-    <!-- Research (Peer-reviewed publications) -->
-    <section id="research" class="py-10 border-t">
-      <h2 class="text-2xl font-semibold tracking-tight">Research</h2>
-      <ol class="mt-6 list-decimal pl-5 space-y-3">
-        <li>Khalid, Nazar, Jere Behrman, Emily Hannum, & Amrit Thapa. 2025. “Floods, community infrastructure, and children’s learning losses in rural India.” <em>Economics of Education Review</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Khalid, Nazar, Jere Behrman, Emily Hannum, & Amrit Thapa. 2024. “Floods and children’s education in rural India.” <em>RSF: The Russell Sage Foundation Journal of the Social Sciences</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Vyas, Sangita, Aashish Gupta, & Khalid, Nazar. 2021. “Gender, government intervention, and slow LPG adoption in rural north India.” <em>World Development</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Coffey, Diane, Payal Hathi, Nazar Khalid, & Amit Thorat. 2021. “Measurement of population mental health: Survey methods and outcomes from India.” <em>Health Policy and Planning</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Hathi, Payal, Diane Coffey, Amit Thorat, & Nazar Khalid. 2021. “When women eat last: Discrimination at home and women’s mental health.” <em>PLOS ONE</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Thorat, Amit, Nazar Khalid, Payal Hathi, Nikhil Srivastav, Dean Spears & Diane Coffey. 2020. “Persisting Prejudice: Measuring Attitudes and Outcomes by Caste and Gender.” <em>CASTE: A Global Journal on Social Exclusion</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Gupta, Aashish, Nazar Khalid, Devashish Deshpande, Payal Hathi, Avni Kapur, Dean Spears, Diane Coffey, Sangita Vyas, & Nikhil Srivastava. 2020. “Revisiting Open Defecation: Evidence from a Panel Survey in Rural North India, 2014–18.” <em>Economic & Political Weekly</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Gupta, Aashish, Sangita Vyas, Payal Hathi, Nazar Khalid, Nikhil Srivastav, Dean Spears, & Diane Coffey. 2020. “Persistence of Solid Fuel Use in Rural North India.” <em>Economic & Political Weekly</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Hathi, Payal, Diane Coffey, Nazar Khalid, Nidhi Khurana, & Amit Thorat. 2018. “Experiences and Perceptions of Discrimination among Dalits and Muslims.” <em>Economic & Political Weekly</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Drèze, Jean., Nazar Khalid, Reetika Khera, & Anmol Somanchi. 2017. “Aadhaar, Biometric Authentication and the PDS in Jharkhand.” <em>Economic & Political Weekly</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-      </ol>
-    </section>
+<footer class="mt-12 py-8 border-t">
+<div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">© <span id="year"></span> Nazar Khalid.</div>
+</footer>
 
-    <!-- Public Writings -->
-    <section id="public-writings" class="py-10 border-t">
-      <h2 class="text-2xl font-semibold tracking-tight">Public Writings</h2>
-      <ol class="mt-6 list-decimal pl-5 space-y-3">
-        <li>Pant, Lovey, Kanika Sharma, Nazar Khalid & Nikhil Srivastav. 2022. “Disrespectful Maternity Care: Labour Room Violence in Government Health Facilities.” <em>The India Forum</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Coffey, Diane, Payal Hathi, Nazar Khalid, Nidhi Khurana, & Amit Thorat. 2020. “Phone survey methodology for social and economic research in India.” <em>Ideas for India</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Coffey, Diane, Payal Hathi, Nazar Khalid, & Amit Thorat. 2020. “Using phone surveys to measure mental health.” <em>Ideas for India</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Gupta, Aashish, Nazar Khalid, Diane Coffey, Sangita Vyas, Payal Hathi, & Nikhil Srivastava. 2019. “Coercion, Construction, and ‘ODF paper pe’: Swachh Bharat according to Local Officials.” <em>The India Forum</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Coffey, Diane, Payal Hathi, Nazar Khalid, Nidhi Khurana, & Amit Thorat. 2019. “Using mobile phones to measure discrimination.” <em>Ideas for India</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Srivastav, Nikhil, & Nazar Khalid. 2019. “What India’s Next Sanitation Policy Can Learn From the Swachh Bharat Mission.” <em>The Wire</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Srivastav, Nikhil, & Nazar Khalid. 2019. “Miles to go before becoming open defecation free.” <em>The Hindu</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Khalid, Nazar. 2019. “Explaining the problem of open defecation in India.” <em>The Indian Express</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Khalid, Nazar. 2018. “Aadhaar, Biometric Authentication and the PDS in Jharkhand.” <em>Ideas for India</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-        <li>Roy, Kingshuk, & Nazar Khalid. 2015. “Illicit Financial Flows: Concepts, Methodologies, and Regional Perspectives.” <em>Center for Budget and Governance Accountability</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-      </ol>
-      <h3 class="mt-8 font-medium">Technical Reports</h3>
-      <ol class="mt-2 list-decimal pl-5 space-y-3">
-        <li>Hathi, Payal, Amit Thorat, Nazar Khalid, Nidhi Khurana, & Diane Coffey. 2020. “Mobile Phone Survey Methods for Measuring Social Discrimination.” <em>NCAER, New Delhi</em>. <a class="underline" href="#" target="_blank" rel="noopener">Link</a></li>
-      </ol>
-    </section>
-
-    <!-- CV (placeholder only) -->
-    <section id="cv" class="py-10 border-t">
-      <h2 class="text-2xl font-semibold tracking-tight">CV</h2>
-      <p class="mt-3 text-gray-600">Google Drive link coming soon.</p>
-      <a href="#" class="inline-flex items-center gap-2 mt-4 px-4 py-2 border rounded-lg hover:bg-gray-50">View CV (Google Drive)</a>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-10 border-t">
-      <h2 class="text-2xl font-semibold tracking-tight">Contact</h2>
-      <ul class="mt-4 space-y-2 text-gray-700">
-        <li>📧 <a href="mailto:nazark@sas.upenn.edu" class="underline">nazark@sas.upenn.edu</a></li>
-        <li>📞 (267)–902–6289</li>
-        <li>🏛 University of Pennsylvania, Philadelphia, PA</li>
-        <li>🔗 <a class="underline" href="https://scholar.google.com/citations?user=sXtOs2sAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
-        <li>🐦 <a class="underline" href="https://x.com/nazar_rice" target="_blank" rel="noopener">X / Twitter</a></li>
-        <li>💼 <a class="underline" href="https://www.linkedin.com/in/nazar-khalid-b88374169" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="mt-12 py-8 border-t">
-    <div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">
-      © <span id="year"></span> Nazar Khalid. Hosted on GitHub Pages.
-    </div>
-  </footer>
-
-  <script>
-    // Mobile menu toggle
-    const btn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    function toggleMenu(){ mobileMenu.classList.toggle('hidden'); }
-    btn.addEventListener('click', toggleMenu);
-
-    // Year update
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script>
+const btn=document.getElementById('menuBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+function toggleMenu(){ mobileMenu.classList.toggle('hidden'); }
+if(btn) btn.addEventListener('click', toggleMenu);
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
-
-
-
-
