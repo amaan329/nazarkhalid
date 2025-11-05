@@ -1,40 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Nazar Khalid — Contact</title>
-<script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-white text-gray-800">
-<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
-<div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-<a href="index.html" class="font-semibold tracking-tight">Nazar Khalid</a>
 <nav class="hidden md:flex items-center gap-6 text-sm">
-<a href="index.html" class="hover:underline">Home</a>
-<a href="research.html" class="hover:underline">Research</a>
-<a href="public-writings.html" class="hover:underline">Public Writings</a>
-<a href="cv.html" class="hover:underline">CV</a>
-<a href="contact.html" class="underline">Contact</a>
+<a href="index.html" data-nav="/index.html" class="hover:underline">Home</a>
+<a href="research.html" data-nav="/research.html" class="hover:underline">Research</a>
+<a href="public-writings.html" data-nav="/public-writings.html" class="hover:underline">Public Writings</a>
+<a href="cv.html" data-nav="/cv.html" class="hover:underline">CV</a>
+<a href="contact.html" data-nav="/contact.html" class="hover:underline">Contact</a>
 </nav>
+<button id="menuBtn" class="md:hidden p-2 border rounded" aria-label="Menu">☰</button>
+</div>
+<div id="mobileMenu" class="md:hidden hidden border-t">
+<div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
+<a href="index.html" class="mobile-link">Home</a>
+<a href="research.html" class="mobile-link">Research</a>
+<a href="public-writings.html" class="mobile-link">Public Writings</a>
+<a href="cv.html" class="mobile-link">CV</a>
+<a href="contact.html" class="mobile-link">Contact</a>
+</div>
 </div>
 </header>
+<!-- shared header end -->
 
 <main class="max-w-5xl mx-auto px-4">
 <section class="py-12">
-<h1 class="text-3xl font-semibold tracking-tight">Contact</h1>
-<ul class="mt-4 space-y-2 text-gray-700">
-<li>📧 <a href="mailto:nazark@sas.upenn.edu" class="underline">nazark@sas.upenn.edu</a></li>
-<li>📞 (267)–902–6289</li>
-<li>🏛 University of Pennsylvania, Philadelphia, PA</li>
-<li>🔗 <a class="underline" href="https://scholar.google.com/citations?user=sXtOs2sAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
-<li>🐦 <a class="underline" href="https://x.com/nazar_rice" target="_blank" rel="noopener">X / Twitter</a></li>
-<li>💼 <a class="underline" href="https://www.linkedin.com/in/nazar-khalid-b88374169" target="_blank" rel="noopener">LinkedIn</a></li>
-</ul>
+<h1 class="text-3xl font-semibold tracking-tight">Curriculum Vitae</h1>
+<p class="mt-3 text-gray-600">Google Drive link coming soon.</p>
+<a href="#" class="inline-flex items-center gap-2 mt-4 px-4 py-2 border rounded-lg hover:bg-gray-50">View CV (Google Drive)</a>
 </section>
 </main>
 
-<footer class="mt-12 py-8 border-t"><div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">© <span id="year-ct"></span> Nazar Khalid.</div></footer>
-<script>document.getElementById('year-ct').textContent=new Date().getFullYear();</script>
+<footer class="mt-12 py-8 border-t"><div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">© <span id="year-cv"></span> Nazar Khalid.</div></footer>
+<script>
+const btn=document.getElementById('menuBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+if(btn&&mobileMenu){
+btn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+document.querySelectorAll('.mobile-link').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.add('hidden')));
+}
+const path=location.pathname.toLowerCase();
+document.querySelectorAll('nav a[data-nav]').forEach(a=>{ if(path.endsWith(a.getAttribute('data-nav'))) a.classList.add('underline'); });
+document.getElementById('year-cv').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
