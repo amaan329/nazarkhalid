@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -8,32 +9,34 @@
 <style> html{scroll-behavior:smooth} </style>
 </head>
 <body class="bg-white text-gray-800">
+<!-- shared header start -->
 <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
 <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
 <a href="index.html" class="font-semibold tracking-tight">Nazar Khalid</a>
 <nav class="hidden md:flex items-center gap-6 text-sm">
-<a href="index.html" class="underline">Home</a>
-<a href="research.html" class="hover:underline">Research</a>
-<a href="public-writings.html" class="hover:underline">Public Writings</a>
-<a href="cv.html" class="hover:underline">CV</a>
-<a href="contact.html" class="hover:underline">Contact</a>
+<a href="index.html" data-nav="/index.html" class="hover:underline">Home</a>
+<a href="research.html" data-nav="/research.html" class="hover:underline">Research</a>
+<a href="public-writings.html" data-nav="/public-writings.html" class="hover:underline">Public Writings</a>
+<a href="cv.html" data-nav="/cv.html" class="hover:underline">CV</a>
+<a href="contact.html" data-nav="/contact.html" class="hover:underline">Contact</a>
 </nav>
 <button id="menuBtn" class="md:hidden p-2 border rounded" aria-label="Menu">☰</button>
 </div>
 <div id="mobileMenu" class="md:hidden hidden border-t">
 <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
-<a href="index.html" onclick="toggleMenu()">Home</a>
-<a href="research.html" onclick="toggleMenu()">Research</a>
-<a href="public-writings.html" onclick="toggleMenu()">Public Writings</a>
-<a href="cv.html" onclick="toggleMenu()">CV</a>
-<a href="contact.html" onclick="toggleMenu()">Contact</a>
+<a href="index.html" class="mobile-link">Home</a>
+<a href="research.html" class="mobile-link">Research</a>
+<a href="public-writings.html" class="mobile-link">Public Writings</a>
+<a href="cv.html" class="mobile-link">CV</a>
+<a href="contact.html" class="mobile-link">Contact</a>
 </div>
 </div>
 </header>
+<!-- shared header end -->
 
 <main class="max-w-5xl mx-auto px-4">
 <section class="py-12 md:py-16 grid md:grid-cols-[200px,1fr] gap-8 items-start">
-<!-- IMPORTANT: No cropping. We avoid fixed height and use object-contain so the head is never cut. -->
+<!-- No cropping: object-contain with auto height -->
 <img src="profile.jpg" alt="Profile photo of Nazar Khalid" class="w-48 h-auto rounded-xl border object-contain bg-gray-100" />
 <div>
 <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Nazar Khalid</h1>
@@ -52,15 +55,16 @@
 </section>
 </main>
 
-<footer class="mt-12 py-8 border-t">
-<div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">© <span id="year"></span> Nazar Khalid.</div>
-</footer>
-
+<footer class="mt-12 py-8 border-t"><div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">© <span id="year"></span> Nazar Khalid.</div></footer>
 <script>
 const btn=document.getElementById('menuBtn');
 const mobileMenu=document.getElementById('mobileMenu');
-function toggleMenu(){ mobileMenu.classList.toggle('hidden'); }
-if(btn) btn.addEventListener('click', toggleMenu);
+if(btn&&mobileMenu){
+btn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+document.querySelectorAll('.mobile-link').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.add('hidden')));
+}
+const path=location.pathname.toLowerCase();
+document.querySelectorAll('nav a[data-nav]').forEach(a=>{ if(path.endsWith(a.getAttribute('data-nav'))) a.classList.add('underline'); });
 document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 </body>
