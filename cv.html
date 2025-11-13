@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CV — Nazar Khalid</title>
+  <title>Nazar Khalid CV</title>
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    /* Polished subtle styles to mimic Payal's CV page */
     html { scroll-behavior: smooth; }
-    .sidebar { min-width: 240px; max-width: 280px; }
+    .sidebar { min-width: 220px; max-width: 280px; }
     .profile-ring { box-shadow: 0 0 0 6px rgba(59,130,246,0.09); } /* soft blue ring */
     .pdf-frame { border: 8px solid #444; padding: 6px; background: #f3f3f3; }
   </style>
@@ -19,7 +18,7 @@
 
 <body class="bg-white text-gray-900">
 
-  <!-- header / top navigation + mobile menu button -->
+  <!-- HEADER -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="index.html" class="font-semibold text-lg">Nazar Khalid</a>
@@ -49,28 +48,23 @@
     </div>
   </header>
 
-  <!-- page body -->
+  <!-- PAGE LAYOUT -->
   <div class="max-w-6xl mx-auto px-4 py-10 grid gap-8 md:grid-cols-12">
 
     <!-- SIDEBAR -->
     <aside class="sidebar col-span-12 md:col-span-3">
       <div class="sticky top-24">
 
-        <!-- PROFILE PHOTO -->
-        <!-- Replace profile.jpg in repo root or change src to your file path -->
         <div class="flex justify-center">
-          <img src="profile.jpg"
-               alt="Nazar Khalid"
-               class="w-40 h-40 rounded-full object-contain profile-ring border-4 border-white">
+          <!-- Upload profile.jpg to repo root or change path -->
+          <img src="profile.jpg" alt="Nazar Khalid" class="w-40 h-40 rounded-full object-contain profile-ring border-4 border-white">
         </div>
 
-        <!-- NAME & ROLE -->
         <div class="text-center mt-4">
           <h1 class="text-xl font-semibold">Nazar Khalid</h1>
           <p class="text-sm text-gray-600 mt-1">PhD Student — Demography & Population Studies</p>
         </div>
 
-        <!-- VERTICAL NAV — mirrors left column style -->
         <nav class="mt-8 border-t pt-6">
           <ul class="space-y-3 text-sm">
             <li><a href="index.html" class="block py-2 hover:underline">Home</a></li>
@@ -82,100 +76,76 @@
           </ul>
         </nav>
 
-        <!-- small links -->
         <div class="mt-8 text-xs text-gray-600">
           <p><strong>Email</strong></p>
           <p class="truncate"><a href="mailto:nazark@sas.upenn.edu" class="underline">nazark@sas.upenn.edu</a></p>
           <p class="mt-3"><strong>Affiliation</strong></p>
-          <p>University of Pennsylvania — Population Studies Center</p>
+          <p>Population Studies Center, University of Pennsylvania</p>
         </div>
 
       </div>
     </aside>
 
-    <!-- MAIN CV CONTENT -->
+    <!-- MAIN -->
     <main class="col-span-12 md:col-span-9">
-
-      <!-- Title + download -->
+      <!-- Title: show only "Nazar Khalid CV" as requested -->
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h2 class="text-3xl font-bold">CV — Nazar Khalid</h2>
-          <p class="text-sm text-gray-600 mt-1">Selected research, public writing, and professional information.</p>
+          <h2 class="text-3xl font-bold">Nazar Khalid CV</h2>
         </div>
 
         <div class="flex items-center gap-3">
-          <!-- Download button (file must exist in repo root with exact name below) -->
-          <a href="NazarKhalid_resume.pdf" download class="inline-flex items-center gap-2 px-4 py-2 border rounded hover:bg-gray-50">
-            <!-- If you prefer to link to Dropbox directly, replace href with the Dropbox share link -->
+          <!-- Download link uses the exact filename you provided -->
+          <a href="NazarKhalid_resume_EPS.pdf" download class="inline-flex items-center gap-2 px-4 py-2 border rounded hover:bg-gray-50">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v12m4-4-4 4-4-4m8 4v4H8v-4" /></svg>
-            Download CV (PDF)
+            Download CV
           </a>
 
-          <a href="NazarKhalid_resume.pdf" target="_blank" class="text-sm text-gray-600 underline">Open in new tab</a>
+          <a href="NazarKhalid_resume_EPS.pdf" target="_blank" class="text-sm text-gray-600 underline">Open</a>
         </div>
       </div>
 
-      <!-- small meta row -->
       <div class="mt-4 text-sm text-gray-600">
-        <span class="mr-3">PhD Student, University of Pennsylvania</span>
-        <span class="mr-3">|</span>
-        <span>Research: Education, Sanitation, Energy, Inequality</span>
+        <span>PhD Student, University of Pennsylvania</span>
       </div>
 
-      <!-- embedded PDF viewer area -->
+      <!-- Embedded PDF viewer -->
       <div class="mt-8">
         <div class="pdf-frame mx-auto max-w-full">
-          <!--
-            EMBED OPTIONS:
-            1) Local PDF (recommended): put 'NazarKhalid_resume.pdf' in repo root and leave src as below.
-            2) Dropbox link: replace src with your Dropbox 'dl=1' link (direct download), e.g.
-               https://www.dropbox.com/s/XXXXX/NazarKhalid_resume.pdf?dl=1
-          -->
-          <iframe
-            src="NazarKhalid_resume.pdf"
-            title="Nazar Khalid CV"
-            class="w-full" style="height:78vh; min-height:600px; border:0;">
-            <!-- fallback -->
-          </iframe>
+          <!-- Use the exact filename in the iframe src -->
+          <iframe src="NazarKhalid_resume_EPS.pdf" title="Nazar Khalid CV" class="w-full" style="height:78vh; min-height:600px; border:0;"></iframe>
         </div>
 
-        <!-- Small caption / instructions -->
-        <p class="mt-3 text-xs text-gray-500">If the PDF does not display in your browser, click "Open in new tab" or Download. For mobile devices the PDF might open in the device reader.</p>
+        <p class="mt-3 text-xs text-gray-500">If the PDF doesn't display, click "Open" or "Download". On mobile the file may open in the device PDF reader.</p>
       </div>
 
-      <!-- Optional: short summary / highlights like Payal's page -->
+      <!-- Optional short highlights -->
       <section class="mt-8">
         <h3 class="text-xl font-semibold">Selected highlights</h3>
         <ul class="mt-3 list-disc pl-5 text-gray-700 space-y-2">
-          <li><strong>Recent peer-reviewed work:</strong> Floods & children's education (RSF, EER), LPG adoption (World Development), mental-health & phone surveys (HPP; PLOS ONE).</li>
-          <li><strong>Presentations:</strong> PAA (2025), RC28 Shanghai (2024), CIES (2024).</li>
-          <li><strong>Fellowships:</strong> Penn Presidential PhD Fellowship; Benjamin Franklin Fellowship; Judith Rodin Fellowship.</li>
+          <li>Peer-reviewed work on floods & education, sanitation, energy, and measurement methods.</li>
+          <li>Recent talks: PAA (2025), RC28 Shanghai (2024), CIES (2024).</li>
+          <li>Fellowships: Penn Presidential PhD Fellowship; Benjamin Franklin Fellowship.</li>
         </ul>
       </section>
-
     </main>
   </div>
 
-  <!-- footer -->
+  <!-- FOOTER -->
   <footer class="mt-12 py-8 border-t">
     <div class="max-w-6xl mx-auto px-4 text-sm text-gray-500">
       © <span id="year-cv"></span> Nazar Khalid.
     </div>
   </footer>
 
-  <!-- JS: menu toggle + active nav highlighting -->
+  <!-- JS -->
   <script>
     document.getElementById('year-cv').textContent = new Date().getFullYear();
-
-    const btn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
+    const btn = document.getElementById('menuBtn'), mobileMenu = document.getElementById('mobileMenu');
     if (btn && mobileMenu) {
       btn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
       document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
     }
-
-    // highlight active link in desktop nav (based on data-nav attribute approach used on other pages)
-    // If you prefer explicit underline on CV, it's already set in the nav above.
   </script>
 </body>
 </html>
