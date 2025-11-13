@@ -1,66 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Nazar Khalid — Home</title>
-<meta name="description" content="Nazar Khalid — PhD student in Demography & Sociology at the University of Pennsylvania.">
-<script src="https://cdn.tailwindcss.com"></script>
-<style> html{scroll-behavior:smooth} </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nazar Khalid — Demography & Population Studies</title>
+  <meta name="description" content="Nazar Khalid — PhD student (Demography & Sociology), University of Pennsylvania. Research on floods, sanitation, energy, discrimination and education in South Asia." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>html{scroll-behavior:smooth} details summary::-webkit-details-marker{display:none}</style>
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nazar Khalid",
+    "url": "https://<your-username>.github.io/<repo>",
+    "jobTitle": "PhD Student, Demography & Population Studies",
+    "worksFor": {"@type":"Organization","name":"University of Pennsylvania"},
+    "sameAs": ["https://scholar.google.com/citations?user=sXtOs2sAAAAJ","https://www.pop.upenn.edu/bio/nazar-khalid"]
+  }
+  </script>
 </head>
-<body class="bg-white text-gray-800">
-<!-- shared header start -->
-<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
-<div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-<a href="index.html" class="font-semibold tracking-tight">Nazar Khalid</a>
-<nav class="hidden md:flex items-center gap-6 text-sm">
-<a href="index.html" data-nav="/index.html" class="hover:underline">Home</a>
-<a href="research.html" data-nav="/research.html" class="hover:underline">Research</a>
-<a href="public-writings.html" data-nav="/public-writings.html" class="hover:underline">Public Writings</a>
-<a href="cv.html" data-nav="/cv.html" class="hover:underline">CV</a>
-<a href="contact.html" data-nav="/contact.html" class="hover:underline">Contact</a>
-</nav>
-<button id="menuBtn" class="md:hidden p-2 border rounded" aria-label="Menu">☰</button>
-</div>
-<div id="mobileMenu" class="md:hidden hidden border-t">
-<div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
-<a href="index.html" class="mobile-link">Home</a>
-<a href="research.html" class="mobile-link">Research</a>
-<a href="public-writings.html" class="mobile-link">Public Writings</a>
-<a href="cv.html" class="mobile-link">CV</a>
-<a href="contact.html" class="mobile-link">Contact</a>
-</div>
-</div>
-</header>
-<!-- shared header end -->
+<body class="bg-white text-gray-900">
 
-<main class="max-w-5xl mx-auto px-4">
-<section class="py-12 md:py-16 grid md:grid-cols-[200px,1fr] gap-8 items-start">
-<!-- No cropping: object-contain with auto height -->
-<img src="profile.jpg" alt="Profile photo of Nazar Khalid" class="w-48 h-auto rounded-xl border object-contain bg-gray-100" />
-<div>
-<h1 class="text-2xl md:text-3xl font-semibold tracking-tight">Hi, I'm Nazar Khalid</h1>
-<p class="mt-4 leading-relaxed">I am a Ph.D. candidate in Demography and Sociology at the University of Pennsylvania, where I study how structural inequalities shape life outcomes in marginalized communities. My research examines how caste, class, and gender hierarchies intersect with environmental disruptions, social policies, and cultural norms to affect education, health, and wellbeing in India.</p>
-<p class="mt-2 leading-relaxed">My work investigates three interconnected research questions. First, I examine how environmental shocks function as stratification mechanisms, analyzing how floods disproportionately affect lower-caste, poorer, and female-headed households, and how this differential exposure drives educational and health inequalities. Second, I study how caste and gender discrimination shapes mental health and family wellbeing, investigating which inequalities are preventable and which reflect deeply entrenched social organization. Third, I analyze the unintended consequences of social policies and technologies, examining how programs like Aadhaar-based biometric authentication and clean energy subsidies interact with existing inequalities to create new forms of exclusion or opportunity.</p>
-<p class="mt-5 leading-relaxed">My work draws on population-representative surveys, longitudinal data, and field research to understand how inequality is produced and reproduced. I use quantitative methods—including geospatial analysis, panel data techniques, and data linkage across survey and satellite sources—to examine questions about differential exposure, vulnerability, and access to opportunities. My research also incorporates qualitative approaches, including fieldwork and in-depth interviews, to understand the lived experiences behind statistical patterns.</p>
-<p class="mt-6 leading-relaxed">I was awarded the University of Pennsylvania Inaugural Presidential Fellowship (2021-2024). My research has been published in RSF: The Russell Sage Foundation Journal of the Social Sciences, Economics of Education Review, World Development, PLOS ONE, Health Policy and Planning, and Economic and Political Weekly, among others.</p>
-<div class="mt-4 flex flex-wrap gap-3 text-sm">
-<a class="underline" href="https://scholar.google.com/citations?user=sXtOs2sAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-</div>
-</section>
-</main>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="font-semibold text-lg">Nazar Khalid</a>
 
-<footer class="mt-12 py-8 border-t"><div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">© <span id="year"></span> Nazar Khalid.</div></footer>
-<script>
-const btn=document.getElementById('menuBtn');
-const mobileMenu=document.getElementById('mobileMenu');
-if(btn&&mobileMenu){
-btn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
-document.querySelectorAll('.mobile-link').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.add('hidden')));
-}
-const path=location.pathname.toLowerCase();
-document.querySelectorAll('nav a[data-nav]').forEach(a=>{ if(path.endsWith(a.getAttribute('data-nav'))) a.classList.add('underline'); });
-document.getElementById('year').textContent=new Date().getFullYear();
-</script>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html" data-nav="/index.html">Home</a>
+        <a href="research.html" data-nav="/research.html">Research</a>
+        <a href="public-writings.html" data-nav="/public-writings.html">Public Writings</a>
+        <a href="cv.html" data-nav="/cv.html">CV</a>
+        <a href="media.html" data-nav="/media.html">Media & Outreach</a>
+        <a href="contact.html" data-nav="/contact.html">Contact</a>
+      </nav>
+
+      <button id="menuBtn" class="md:hidden p-2 border rounded" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden hidden border-t">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="research.html" class="mobile-link">Research</a>
+        <a href="public-writings.html" class="mobile-link">Public Writings</a>
+        <a href="cv.html" class="mobile-link">CV</a>
+        <a href="media.html" class="mobile-link">Media & Outreach</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="max-w-5xl mx-auto px-4 py-12">
+    <section class="grid md:grid-cols-3 gap-8 items-center">
+      <div class="col-span-2">
+        <h1 class="text-4xl font-bold">Nazar Khalid</h1>
+        <p class="mt-2 text-gray-700">PhD student (Demography & Sociology), University of Pennsylvania. Research on climatic shocks, education, sanitation, energy transitions, and social inequality in South Asia.</p>
+
+        <div class="mt-6 space-y-3">
+          <p class="text-sm text-gray-600"><strong>Email:</strong> <a href="mailto:nazark@sas.upenn.edu" class="underline">nazark@sas.upenn.edu</a></p>
+          <p class="text-sm text-gray-600"><strong>Affiliation:</strong> Population Studies Center & Department of Sociology, University of Pennsylvania</p>
+          <p class="text-sm text-gray-600"><strong>Quick links:</strong> <a href="research.html" class="underline">Research</a> • <a href="public-writings.html" class="underline">Public Writings</a> • <a href="cv.html" class="underline">CV</a></p>
+        </div>
+      </div>
+
+      <!-- PROFILE IMAGE -->
+      <div class="flex items-center justify-center">
+        <!-- UPLOAD profile.jpg to repository root or change path below -->
+        <img src="profile.jpg" alt="Nazar Khalid" class="w-48 h-48 object-contain rounded-full border">
+        <!-- NOTE: object-contain ensures head isn't cropped. -->
+      </div>
+    </section>
+
+    <!-- Quick panels -->
+    <section class="mt-10 grid gap-6 md:grid-cols-3">
+      <a href="research.html" class="block p-5 border rounded-lg hover:shadow">
+        <h3 class="font-semibold">Research</h3>
+        <p class="mt-2 text-sm text-gray-600">Peer-reviewed publications with concise summaries and links to papers.</p>
+      </a>
+
+      <a href="public-writings.html" class="block p-5 border rounded-lg hover:shadow">
+        <h3 class="font-semibold">Public Writings</h3>
+        <p class="mt-2 text-sm text-gray-600">Policy commentary, op-eds and technical notes aimed at practitioners and public audiences.</p>
+      </a>
+
+      <a href="media.html" class="block p-5 border rounded-lg hover:shadow">
+        <h3 class="font-semibold">Media & Outreach</h3>
+        <p class="mt-2 text-sm text-gray-600">Selected press mentions, interviews, podcasts, and talks.</p>
+      </a>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-semibold">Latest</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-2">
+        <!-- Example: latest paper -->
+        <article class="p-4 border rounded">
+          <h4 class="font-semibold">Floods, community infrastructure, and children’s learning losses in rural India</h4>
+          <p class="text-sm text-gray-600 mt-1">Economics of Education Review (2025) — <a href="https://www.sciencedirect.com/science/article/pii/S0272775725000159" class="underline">Read paper</a></p>
+        </article>
+        <article class="p-4 border rounded">
+          <h4 class="font-semibold">Disrespectful Maternity Care: Labour Room Violence</h4>
+          <p class="text-sm text-gray-600 mt-1">The India Forum (2022) — <a href="https://www.theindiaforum.in/article/disrespectful-maternity-care-labour-room-violence-government-health-facilities" class="underline">Read article</a></p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="mt-12 py-8 border-t">
+    <div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">© <span id="year-home"></span> Nazar Khalid.</div>
+  </footer>
+
+  <script>
+    // menu + active link
+    document.getElementById('year-home').textContent = new Date().getFullYear();
+    const btn=document.getElementById('menuBtn'), mobile=document.getElementById('mobileMenu');
+    if(btn){ btn.addEventListener('click',()=>mobile.classList.toggle('hidden')); }
+    const path=location.pathname.toLowerCase();
+    document.querySelectorAll('nav a[data-nav]').forEach(a=>{ if(path.endsWith(a.getAttribute('data-nav'))) a.classList.add('underline'); });
+  </script>
 </body>
 </html>
