@@ -102,4 +102,15 @@
   </main>
 
   <footer class="mt-12 py-8 border-t">
-    <div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">© <span id="
+    <div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">© <span id="year-pw"></span> Nazar Khalid.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year-pw').textContent=new Date().getFullYear();
+    const btn=document.getElementById('menuBtn'), mobile=document.getElementById('mobileMenu');
+    if(btn){ btn.addEventListener('click',()=>mobile.classList.toggle('hidden')); }
+    document.querySelectorAll('.mobile-link').forEach(l=>l.addEventListener('click',()=>mobile.classList.add('hidden')));
+    document.querySelectorAll('nav a[data-nav]').forEach(a=>{ if(location.pathname.toLowerCase().endsWith(a.getAttribute('data-nav'))) a.classList.add('underline'); });
+  </script>
+</body>
+</html>
