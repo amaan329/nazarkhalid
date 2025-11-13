@@ -1,324 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nazar Khalid — Research</title>
-
-  <!-- Tailwind CSS -->
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Research — Nazar Khalid</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html { scroll-behavior: smooth; }
-    details summary::-webkit-details-marker { display: none; }
-  </style>
+  <style>html{scroll-behavior:smooth} details summary::-webkit-details-marker{display:none}</style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-white text-gray-900">
 
-  <!-- ============== HEADER (same on all pages) ============== -->
+  <!-- HEADER (same across pages) -->
   <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
     <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="index.html" class="font-semibold tracking-tight">Nazar Khalid</a>
-
+      <a href="index.html" class="font-semibold text-lg">Nazar Khalid</a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="index.html" data-nav="/index.html" class="hover:underline">Home</a>
+        <a href="index.html" data-nav="/index.html">Home</a>
         <a href="research.html" data-nav="/research.html" class="underline font-semibold">Research</a>
-        <a href="public-writings.html" data-nav="/public-writings.html" class="hover:underline">Public Writings</a>
-        <a href="cv.html" data-nav="/cv.html" class="hover:underline">CV</a>
-        <a href="contact.html" data-nav="/contact.html" class="hover:underline">Contact</a>
+        <a href="public-writings.html" data-nav="/public-writings.html">Public Writings</a>
+        <a href="cv.html" data-nav="/cv.html">CV</a>
+        <a href="media.html" data-nav="/media.html">Media & Outreach</a>
+        <a href="contact.html" data-nav="/contact.html">Contact</a>
       </nav>
-
-      <button id="menuBtn" class="md:hidden p-2 border rounded" aria-label="Menu">☰</button>
+      <button id="menuBtn" class="md:hidden p-2 border rounded">☰</button>
     </div>
-
     <div id="mobileMenu" class="md:hidden hidden border-t">
       <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
         <a href="index.html" class="mobile-link">Home</a>
-        <a href="research.html" class="mobile-link font-semibold underline">Research</a>
+        <a href="research.html" class="mobile-link">Research</a>
         <a href="public-writings.html" class="mobile-link">Public Writings</a>
         <a href="cv.html" class="mobile-link">CV</a>
+        <a href="media.html" class="mobile-link">Media & Outreach</a>
         <a href="contact.html" class="mobile-link">Contact</a>
       </div>
     </div>
   </header>
-  <!-- ============== HEADER END ============== -->
 
-  <main class="max-w-5xl mx-auto px-4">
-    <section class="py-10">
-      <h1 class="text-3xl font-semibold tracking-tight"> Publications</h1>
-     
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-semibold">Peer-Reviewed Publications</h1>
+    <p class="text-gray-600 mt-2">Concise summaries. Click "More details" for methods/implication notes.</p>
 
-      <div class="mt-8 space-y-8">
+    <div class="mt-8 space-y-8">
+      <!-- Example card (replace/add all cards as below) -->
+      <!-- Card 10 (EER 2025) -->
+      <article class="p-5 border rounded-lg">
+        <!-- IMAGE: upload floods-learning-losses.jpg to /images -->
+        <img src="images/floods-learning-losses.jpg" alt="Floods and learning losses" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-semibold">Floods, community infrastructure, and children’s learning losses in rural India</h2>
+        <p class="text-sm text-gray-600">Economics of Education Review (2025) — Khalid, Behrman, Hannum & Thapa</p>
+        <p class="mt-2">Flood exposure reduces test scores; villages with stronger local infrastructure experience smaller learning losses — infrastructure can buffer climate shocks in education.</p>
+        <details class="mt-3"><summary class="underline cursor-pointer">More details</summary>
+          <p class="mt-2 text-sm text-gray-700">Quasi-experimental estimates, heterogeneous effects by socio-economic groups; policy implication: invest in resilient school and community assets.</p>
+        </details>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0272775725000159" class="underline mt-3 inline-block" target="_blank">Read paper</a>
+      </article>
 
-        <!-- ========== 10. 2025 EER ========== -->
-        <article class="p-5 border rounded-xl">
-          <!-- IMAGE (you can replace the src below with your own) -->
-          <!-- TIP: To host your own, upload to /images and use src="images/floods-learning-losses.jpg" -->
-          <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=1600&auto=format&fit=crop"
-               alt="Flooded rural school context" class="w-full h-48 object-cover rounded-lg mb-4">
-          <div class="flex flex-wrap items-center gap-2 text-xs mb-3">
-            <span class="px-2 py-1 rounded-full border">Climate & Education</span>
-            <span class="px-2 py-1 rounded-full border">Infrastructure</span>
-            <span class="px-2 py-1 rounded-full border">India</span>
-            <span class="px-2 py-1 rounded-full border">2025</span>
-          </div>
-          <h2 class="text-xl font-semibold">Floods, community infrastructure, and children’s learning losses in rural India</h2>
-          <p class="mt-1 text-sm text-gray-600">Khalid, N., Behrman, J., Hannum, E., & Thapa, A. — <em>Economics of Education Review</em> (2025)</p>
-          <p class="mt-3"><strong>Summary:</strong> Flood exposure lowers children’s test scores, but losses are <em>smaller</em> in villages with stronger community infrastructure (roads, accessible schools, communal facilities). Infrastructure acts as a local shock absorber for education.</p>
-          <details class="mt-3 group">
-            <summary class="cursor-pointer select-none inline-flex items-center gap-2"><span class="underline">More details</span><span aria-hidden class="transition group-open:rotate-90">▸</span></summary>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed">
-              Quasi-experimental estimates compare cohorts across flood intensities with community/household controls. Protective effects are largest for disadvantaged groups, implying resilience investments can narrow post-disaster learning gaps.
-            </div>
-          </details>
-          <div class="mt-4 flex flex-wrap gap-3 text-sm">
-            <a class="underline" href="#" target="_blank" rel="noopener">Paper/DOI</a>
-          </div>
-        </article>
+      <!-- Card 9 (RSF 2024) -->
+      <article class="p-5 border rounded-lg">
+        <!-- IMAGE: upload floods-education-rsf.jpg -->
+        <img src="images/floods-education-rsf.jpg" alt="Floods and children" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-semibold">Floods and children’s education in rural India</h2>
+        <p class="text-sm text-gray-600">RSF (2024)</p>
+        <p class="mt-2">Floods disrupt attendance and learning, with the worst effects on marginalized children. Recovery depends on household and community resources.</p>
+        <details class="mt-3"><summary class="underline cursor-pointer">More details</summary>
+          <p class="mt-2 text-sm text-gray-700">Uses IHDS microdata and robustness checks; suggests targeting education recovery programs in flood-prone, disadvantaged districts.</p>
+        </details>
+        <a href="https://www.rsfjournal.org/content/10/1/230" class="underline mt-3 inline-block" target="_blank">Read paper</a>
+      </article>
 
-        <!-- ========== 9. 2024 RSF ========== -->
-        <article class="p-5 border rounded-xl">
-          <!-- IMAGE (replace if you want) -->
-          <img src="https://images.unsplash.com/photo-1521543836131-1c8a18fd0d0c?q=80&w=1600&auto=format&fit=crop"
-               alt="Children commuting to school in monsoon" class="w-full h-48 object-cover rounded-lg mb-4">
-          <div class="flex flex-wrap items-center gap-2 text-xs mb-3">
-            <span class="px-2 py-1 rounded-full border">Climate & Education</span>
-            <span class="px-2 py-1 rounded-full border">Inequality</span>
-            <span class="px-2 py-1 rounded-full border">India</span>
-            <span class="px-2 py-1 rounded-full border">2024</span>
-          </div>
-          <h2 class="text-xl font-semibold">Floods and children’s education in rural India</h2>
-          <p class="mt-1 text-sm text-gray-600">Khalid, N., Behrman, J., Hannum, E., & Thapa, A. — <em>RSF Journal</em> (2024)</p>
-          <p class="mt-3"><strong>Summary:</strong> Floods disrupt attendance and achievement; the harm is concentrated among marginalized households (by caste, religion, parental education). Resources and community support accelerate recovery for some children.</p>
-          <details class="mt-3 group">
-            <summary class="cursor-pointer select-none inline-flex items-center gap-2"><span class="underline">More details</span><span aria-hidden class="transition group-open:rotate-90">▸</span></summary>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed">
-              Uses microdata to quantify heterogeneous effects and layered vulnerability. Policy implication: pair disaster response with targeted education support in flood-prone districts.
-            </div>
-          </details>
-          <div class="mt-4 flex flex-wrap gap-3 text-sm">
-            <a class="underline" href="#" target="_blank">Paper/DOI</a>
-          </div>
-        </article>
+      <!-- Card 8 (World Development 2021) -->
+      <article class="p-5 border rounded-lg">
+        <!-- IMAGE: upload solid-fuel.jpg -->
+        <img src="images/solid-fuel.jpg" alt="LPG adoption" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-semibold">Gender, government intervention, and slow LPG adoption in rural north India</h2>
+        <p class="text-sm text-gray-600">World Development (2021)</p>
+        <p class="mt-2">Subsidies and connections increased access but not sustained LPG use; intra-household gender dynamics, refill costs and supply constraints matter.</p>
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0305750X21002977" class="underline inline-block mt-3" target="_blank">Read paper</a>
+      </article>
 
-        <!-- ========== 8. 2021 World Development (LPG) ========== -->
-        <article class="p-5 border rounded-xl">
-          <!-- IMAGE (replace if you want) -->
-          <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=1600&auto=format&fit=crop"
-               alt="LPG and cooking context" class="w-full h-48 object-cover rounded-lg mb-4">
-          <div class="flex flex-wrap items-center gap-2 text-xs mb-3">
-            <span class="px-2 py-1 rounded-full border">Energy & Gender</span>
-            <span class="px-2 py-1 rounded-full border">Rural India</span>
-            <span class="px-2 py-1 rounded-full border">2021</span>
-          </div>
-          <h2 class="text-xl font-semibold">Gender, government intervention, and slow LPG adoption in rural north India</h2>
-          <p class="mt-1 text-sm text-gray-600">Vyas, S., Gupta, A., & <strong>Khalid, N.</strong> — <em>World Development</em> (2021)</p>
-          <p class="mt-3"><strong>Summary:</strong> Subsidies expand LPG access, yet solid fuels persist. Gendered decision power, recurring refill costs, and supply reliability explain slow transition—connections alone don’t change usage.</p>
-          <details class="mt-3 group">
-            <summary class="cursor-pointer select-none inline-flex items-center gap-2"><span class="underline">More details</span><span aria-hidden class="transition group-open:rotate-90">▸</span></summary>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed">
-              Recommends interventions that address intra-household bargaining and affordability, alongside last-mile supply.
-            </div>
-          </details>
-          <div class="mt-4 flex flex-wrap gap-3 text-sm">
-            <a class="underline" href="#" target="_blank">Paper/DOI</a>
-          </div>
-        </article>
+      <!-- Card 7 (Health Policy & Planning 2021) -->
+      <article class="p-5 border rounded-lg">
+        <!-- IMAGE: upload phone-survey.jpg -->
+        <img src="images/phone-survey.jpg" alt="Phone surveys" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-semibold">Measurement of population mental health: Survey methods and outcomes from India</h2>
+        <p class="text-sm text-gray-600">Health Policy & Planning (2021)</p>
+        <p class="mt-2">Evaluates feasibility and bias of phone surveys to measure mental health, with recommendations for question design and monitoring.</p>
+        <a href="https://academic.oup.com/heapol/article/36/5/606/6163121" class="underline inline-block mt-3" target="_blank">Read paper</a>
+      </article>
 
-        <!-- ========== 7. 2021 Health Policy & Planning (Methods/MH) ========== -->
-        <article class="p-5 border rounded-xl">
-          <!-- IMAGE (replace if you want) -->
-          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600&auto=format&fit=crop"
-               alt="Phone survey fieldwork" class="w-full h-48 object-cover rounded-lg mb-4">
-          <div class="flex flex-wrap items-center gap-2 text-xs mb-3">
-            <span class="px-2 py-1 rounded-full border">Methods</span>
-            <span class="px-2 py-1 rounded-full border">Mental Health</span>
-            <span class="px-2 py-1 rounded-full border">2021</span>
-          </div>
-          <h2 class="text-xl font-semibold">Measurement of population mental health: Survey methods and outcomes from India</h2>
-          <p class="mt-1 text-sm text-gray-600">Coffey, D., Hathi, P., <strong>Khalid, N.</strong>, & Thorat, A. — <em>Health Policy and Planning</em> (2021)</p>
-          <p class="mt-3"><strong>Summary:</strong> Assesses phone-based population surveys for mental-health measurement. Discusses feasibility, biases, and design choices to improve reliability of rapid monitoring.</p>
-          <details class="mt-3 group">
-            <summary class="cursor-pointer select-none inline-flex items-center gap-2"><span class="underline">More details</span><span aria-hidden class="transition group-open:rotate-90">▸</span></summary>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed">
-              Compares question formats and response patterns; practical guidance for large-scale data collection when in-person work is constrained.
-            </div>
-          </details>
-          <div class="mt-4 flex flex-wrap gap-3 text-sm">
-            <a class="underline" href="#" target="_blank">Paper/DOI</a>
-          </div>
-        </article>
+      <!-- Card 6 (PLOS ONE 2021) -->
+      <article class="p-5 border rounded-lg">
+        <!-- IMAGE: upload women-eat-last.jpg -->
+        <img src="images/women-eat-last.jpg" alt="Women eat last" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-semibold">When women eat last: Discrimination at home and women's mental health</h2>
+        <p class="text-sm text-gray-600">PLOS ONE (2021)</p>
+        <p class="mt-2">Intra-household food distribution norms associate with worse mental health outcomes for women, highlighting social determinants of health.</p>
+        <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0247065" class="underline inline-block mt-3" target="_blank">Read paper</a>
+      </article>
 
-        <!-- ========== 6. 2021 PLOS ONE (Women eat last) ========== -->
-        <article class="p-5 border rounded-xl">
-          <!-- IMAGE (replace if you want) -->
-          <img src="https://images.unsplash.com/photo-1555243896-c709bfa0b564?q=80&w=1600&auto=format&fit=crop"
-               alt="Household meal context" class="w-full h-48 object-cover rounded-lg mb-4">
-          <div class="flex flex-wrap items-center gap-2 text-xs mb-3">
-            <span class="px-2 py-1 rounded-full border">Gender & Health</span>
-            <span class="px-2 py-1 rounded-full border">Household</span>
-            <span class="px-2 py-1 rounded-full border">2021</span>
-          </div>
-          <h2 class="text-xl font-semibold">When women eat last: Discrimination at home and women’s mental health</h2>
-          <p class="mt-1 text-sm text-gray-600">Hathi, P., Coffey, D., Thorat, A., & <strong>Khalid, N.</strong> — <em>PLOS ONE</em> (2021)</p>
-          <p class="mt-3"><strong>Summary:</strong> Documents associations between intra-household food norms (women eating after men) and women’s mental-health outcomes—framing household discrimination as a public-health concern.</p>
-          <details class="mt-3 group">
-            <summary class="cursor-pointer select-none inline-flex items-center gap-2"><span class="underline">More details</span><span aria-hidden class="transition group-open:rotate-90">▸</span></summary>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed">
-              Highlights social determinants of mental health and the need for interventions beyond clinical care.
-            </div>
-          </details>
-          <div class="mt-4 flex flex-wrap gap-3 text-sm">
-            <a class="underline" href="#" target="_blank">Paper/DOI</a>
-          </div>
-        </article>
+      <!-- Card 5 (CASTE 2020) -->
+      <article class="p-5 border rounded-lg">
+        <!-- IMAGE: upload persisting-prejudice.jpg -->
+        <img src="images/persisting-prejudice.jpg" alt="Persisting prejudice" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-semibold">Persisting Prejudice: Measuring Attitudes and Outcomes by Caste and Gender</h2>
+        <p class="text-sm text-gray-600">CASTE (2020)</p>
+        <p class="mt-2">Develops measures of discriminatory attitudes and links them to outcomes—useful for monitoring bias and policy evaluation.</p>
+        <a href="https://journals.library.brandeis.edu/index.php/caste/article/view/172" class="underline inline-block mt-3" target="_blank">Read paper</a>
+      </article>
 
-        <!-- ========== 5. 2020 CASTE (Persisting Prejudice) ========== -->
-        <article class="p-5 border rounded-xl">
-          <!-- IMAGE PLACEHOLDER — replace with your own if desired
-               Example local path: src="images/persisting-prejudice.jpg"
-               Example free image idea: symbolic inequality / protest / silhouettes -->
-          <img src="images/persisting-prejudice.jpg"
-               alt="Symbolic depiction of prejudice and inequality" class="w-full h-48 object-cover rounded-lg mb-4">
-          <div class="flex flex-wrap items-center gap-2 text-xs mb-3">
-            <span class="px-2 py-1 rounded-full border">Caste & Gender</span>
-            <span class="px-2 py-1 rounded-full border">Attitudes</span>
-            <span class="px-2 py-1 rounded-full border">2020</span>
-          </div>
-          <h2 class="text-xl font-semibold">Persisting Prejudice: Measuring Attitudes and Outcomes by Caste and Gender</h2>
-          <p class="mt-1 text-sm text-gray-600">Thorat, A., <strong>Khalid, N.</strong>, Hathi, P., Srivastav, N., Spears, D., & Coffey, D. — <em>CASTE</em> (2020)</p>
-          <p class="mt-3"><strong>Summary:</strong> Develops and applies measures of discriminatory attitudes and related outcomes, documenting persistent caste- and gender-based prejudice in India.</p>
-          <details class="mt-3 group">
-            <summary class="cursor-pointer select-none inline-flex items-center gap-2"><span class="underline">More details</span><span aria-hidden class="transition group-open:rotate-90">▸</span></summary>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed">
-              Framework helps track inequality and inform policy debates around bias, monitoring, and accountability.
-            </div>
-          </details>
-          <div class="mt-4 flex flex-wrap gap-3 text-sm">
-            <a class="underline" href="#" target="_blank">Paper/DOI</a>
-          </div>
-        </article>
+      <!-- Card 4 (EPW 2020 panel) -->
+      <article class="p-5 border rounded-lg">
+        <!-- IMAGE: upload open-defecation-panel.jpg -->
+        <img src="images/open-defecation-panel.jpg" alt="Sanitation panel" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-semibold">Revisiting Open Defecation: Evidence from a Panel Survey in Rural North India, 2014–18</h2>
+        <p class="text-sm text-gray-600">Economic & Political Weekly (2020)</p>
+        <p class="mt-2">Panel evidence shows persistent open defecation in many contexts despite policy pushes; social and behavioural constraints persist.</p>
+        <a href="https://www.epw.in/journal/2020/21/special-articles/revisiting-open-defecation.html" class="underline inline-block mt-3" target="_blank">Read paper</a>
+      </article>
 
-        <!-- ========== 4. 2020 EPW (Panel: Revisiting Open Defecation) ========== -->
-        <article class="p-5 border rounded-xl">
-          <!-- IMAGE PLACEHOLDER — replace with your own -->
-          <img src="images/open-defecation-panel.jpg"
-               alt="Rural sanitation context" class="w-full h-48 object-cover rounded-lg mb-4">
-          <div class="flex flex-wrap items-center gap-2 text-xs mb-3">
-            <span class="px-2 py-1 rounded-full border">Sanitation</span>
-            <span class="px-2 py-1 rounded-full border">Panel Data</span>
-            <span class="px-2 py-1 rounded-full border">2014–18</span>
-          </div>
-          <h2 class="text-xl font-semibold">Revisiting Open Defecation: Evidence from a Panel Survey in Rural North India, 2014–18</h2>
-          <p class="mt-1 text-sm text-gray-600">Gupta, A., <strong>Khalid, N.</strong>, Deshpande, D., et al. — <em>Economic & Political Weekly</em> (2020)</p>
-          <p class="mt-3"><strong>Summary:</strong> Tracks sanitation behavior over four years; despite major campaigns, open defecation remains entrenched in many communities—pointing to social and behavioral barriers.</p>
-          <details class="mt-3 group">
-            <summary class="cursor-pointer select-none inline-flex items-center gap-2"><span class="underline">More details</span><span aria-hidden class="transition group-open:rotate-90">▸</span></summary>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed">
-              Panel design supports stronger inference on change than cross-sections; underscores need for norm-aware policy.
-            </div>
-          </details>
-          <div class="mt-4 flex flex-wrap gap-3 text-sm">
-            <a class="underline" href="#" target="_blank">Paper/DOI</a>
-          </div>
-        </article>
+      <!-- Card 3 (EPW 2020 solid fuel) -->
+      <article class="p-5 border rounded-lg">
+        <!-- IMAGE: upload solid-fuel-use.jpg -->
+        <img src="images/solid-fuel-use.jpg" alt="Solid fuel use" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-semibold">Persistence of Solid Fuel Use in Rural North India</h2>
+        <p class="text-sm text-gray-600">Economic & Political Weekly (2020)</p>
+        <p class="mt-2">Argues policy needs to address affordability of refills and supply reliability, not just initial LPG connections.</p>
+        <a href="https://www.epw.in/journal/2020/3/special-articles/persistence-solid-fuel-use-rural-north-india.html" class="underline inline-block mt-3" target="_blank">Read paper</a>
+      </article>
 
-        <!-- ========== 3. 2020 EPW (Solid Fuel Persistence) ========== -->
-        <article class="p-5 border rounded-xl">
-          <!-- IMAGE PLACEHOLDER — replace with your own -->
-          <img src="images/solid-fuel-use.jpg"
-               alt="Biomass cooking in rural setting" class="w-full h-48 object-cover rounded-lg mb-4">
-          <div class="flex flex-wrap items-center gap-2 text-xs mb-3">
-            <span class="px-2 py-1 rounded-full border">Energy Use</span>
-            <span class="px-2 py-1 rounded-full border">Rural India</span>
-            <span class="px-2 py-1 rounded-full border">2020</span>
-          </div>
-          <h2 class="text-xl font-semibold">Persistence of Solid Fuel Use in Rural North India</h2>
-          <p class="mt-1 text-sm text-gray-600">Gupta, A., <strong>Khalid, N.</strong>, Vyas, S., et al. — <em>Economic & Political Weekly</em> (2020)</p>
-          <p class="mt-3"><strong>Summary:</strong> Clean-fuel policies increased access, but many households still rely on solid fuels; affordability, access, and habit are key constraints.</p>
-          <details class="mt-3 group">
-            <summary class="cursor-pointer select-none inline-flex items-center gap-2"><span class="underline">More details</span><span aria-hidden class="transition group-open:rotate-90">▸</span></summary>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed">
-              Argues for tackling refill costs and supply reliability, not just initial connections.
-            </div>
-          </details>
-          <div class="mt-4 flex flex-wrap gap-3 text-sm">
-            <a class="underline" href="#" target="_blank">Paper/DOI</a>
-          </div>
-        </article>
+      <!-- Card 2 (EPW 2018 discrimination) -->
+      <article class="p-5 border rounded-lg">
+        <!-- IMAGE: upload discrimination-dalits-muslims.jpg -->
+        <img src="images/discrimination-dalits-muslims.jpg" alt="Discrimination" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-semibold">Experiences and Perceptions of Discrimination among Dalits and Muslims</h2>
+        <p class="text-sm text-gray-600">Economic & Political Weekly (2018)</p>
+        <p class="mt-2">Documents everyday discrimination and mismatches between experiences and reported perceptions; useful for policy monitoring.</p>
+        <a href="https://www.epw.in/journal/2018/42/commentary/experiences-and-perceptions.html" class="underline inline-block mt-3" target="_blank">Read paper</a>
+      </article>
 
-        <!-- ========== 2. 2018 EPW (Discrimination Experiences & Perceptions) ========== -->
-        <article class="p-5 border rounded-xl">
-          <!-- IMAGE PLACEHOLDER — replace with your own -->
-          <img src="images/discrimination-dalits-muslims.jpg"
-               alt="Symbolic photo representing discrimination" class="w-full h-48 object-cover rounded-lg mb-4">
-          <div class="flex flex-wrap items-center gap-2 text-xs mb-3">
-            <span class="px-2 py-1 rounded-full border">Discrimination</span>
-            <span class="px-2 py-1 rounded-full border">India</span>
-            <span class="px-2 py-1 rounded-full border">2018</span>
-          </div>
-          <h2 class="text-xl font-semibold">Experiences and Perceptions of Discrimination among Dalits and Muslims</h2>
-          <p class="mt-1 text-sm text-gray-600">Hathi, P., Coffey, D., <strong>Khalid, N.</strong>, & Thorat, A. — <em>Economic & Political Weekly</em> (2018)</p>
-          <p class="mt-3"><strong>Summary:</strong> Provides evidence on everyday discrimination and gaps between lived experiences and reported perceptions across groups—useful for tracking social attitudes and targeting policy.</p>
-          <details class="mt-3 group">
-            <summary class="cursor-pointer select-none inline-flex items-center gap-2"><span class="underline">More details</span><span aria-hidden class="transition group-open:rotate-90">▸</span></summary>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed">
-              Emphasizes measurement strategies for sensitive topics and their implications for service delivery and inclusion.
-            </div>
-          </details>
-          <div class="mt-4 flex flex-wrap gap-3 text-sm">
-            <a class="underline" href="#" target="_blank">Paper/DOI</a>
-          </div>
-        </article>
+      <!-- Card 1 (EPW 2017 Aadhaar) -->
+      <article class="p-5 border rounded-lg">
+        <!-- IMAGE: upload aadhaar-pds.jpg -->
+        <img src="images/aadhaar-pds.jpg" alt="Aadhaar and PDS" class="w-full h-48 object-cover rounded mb-4">
+        <h2 class="text-xl font-semibold">Aadhaar, Biometric Authentication and the PDS in Jharkhand</h2>
+        <p class="text-sm text-gray-600">Economic & Political Weekly (2017)</p>
+        <p class="mt-2">Assessing biometric authentication in food subsidy delivery; discusses exclusion risks and safeguards.</p>
+        <a href="https://www.epw.in/journal/2017/50/special-articles/aadhaar-and-food-security-jharkhand.html" class="underline inline-block mt-3" target="_blank">Read paper</a>
+      </article>
 
-        <!-- ========== 1. 2017 EPW (Aadhaar & PDS) ========== -->
-        <article class="p-5 border rounded-xl">
-          <!-- IMAGE PLACEHOLDER — replace with your own -->
-          <img src="images/aadhaar-pds.jpg"
-               alt="Ration shop / biometric device" class="w-full h-48 object-cover rounded-lg mb-4">
-          <div class="flex flex-wrap items-center gap-2 text-xs mb-3">
-            <span class="px-2 py-1 rounded-full border">ID Systems</span>
-            <span class="px-2 py-1 rounded-full border">Public Distribution</span>
-            <span class="px-2 py-1 rounded-full border">2017</span>
-          </div>
-          <h2 class="text-xl font-semibold">Aadhaar, Biometric Authentication and the PDS in Jharkhand</h2>
-          <p class="mt-1 text-sm text-gray-600">Drèze, J., <strong>Khalid, N.</strong>, Khera, R., & Somanchi, A. — <em>Economic & Political Weekly</em> (2017)</p>
-          <p class="mt-3"><strong>Summary:</strong> Evaluates Aadhaar-based authentication in the Public Distribution System. Finds implementation challenges and exclusion risks—digitization must not create barriers for vulnerable households.</p>
-          <details class="mt-3 group">
-            <summary class="cursor-pointer select-none inline-flex items-center gap-2"><span class="underline">More details</span><span aria-hidden class="transition group-open:rotate-90">▸</span></summary>
-            <div class="mt-3 text-sm text-gray-700 leading-relaxed">
-              Discusses trade-offs between efficiency and inclusion; recommends safeguards for access and grievance redress.
-            </div>
-          </details>
-          <div class="mt-4 flex flex-wrap gap-3 text-sm">
-            <a class="underline" href="#" target="_blank">Paper/DOI</a>
-          </div>
-        </article>
-
-      </div>
-    </section>
+    </div>
   </main>
 
   <footer class="mt-12 py-8 border-t">
-    <div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">
-      © <span id="year-r"></span> Nazar Khalid.
-    </div>
+    <div class="max-w-5xl mx-auto px-4 text-sm text-gray-500">© <span id="year-r"></span> Nazar Khalid.</div>
   </footer>
 
-  <!-- JS: mobile menu + active tab -->
   <script>
-    const btn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (btn && mobileMenu) {
-      btn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-      document.querySelectorAll('.mobile-link').forEach(a =>
-        a.addEventListener('click', () => mobileMenu.classList.add('hidden'))
-      );
-    }
-    const path = location.pathname.toLowerCase();
-    document.querySelectorAll('nav a[data-nav]').forEach(a => {
-      if (path.endsWith(a.getAttribute('data-nav'))) a.classList.add('underline');
-    });
     document.getElementById('year-r').textContent = new Date().getFullYear();
+    const btn=document.getElementById('menuBtn'), mobile=document.getElementById('mobileMenu');
+    if(btn){ btn.addEventListener('click',()=>mobile.classList.toggle('hidden')); }
+    const path=location.pathname.toLowerCase();
+    document.querySelectorAll('nav a[data-nav]').forEach(a=>{ if(path.endsWith(a.getAttribute('data-nav'))) a.classList.add('underline'); });
+    document.querySelectorAll('.mobile-link').forEach(l=>l.addEventListener('click',()=>mobile.classList.add('hidden')));
   </script>
 </body>
 </html>
